@@ -99,7 +99,7 @@ export default function HomePage() {
             >
               <div className="relative h-48 w-full overflow-hidden bg-gray-100 group-hover:scale-110 transition">
                 <Image
-                  src="/media/dryfruit-box.jpeg"
+                  src="/media/trousseau-packing.jpeg"
                   alt="Trousseau Packing"
                   fill
                   className="object-cover"
