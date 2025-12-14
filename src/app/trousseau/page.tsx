@@ -40,6 +40,7 @@ const PACKING_TYPES = [
   { id: 'eco', name: 'Eco-Friendly Packaging', description: 'Sustainable jute & kraft boxes' },
   { id: 'luxury', name: 'Luxury Gold Foil Packaging', description: 'Premium boxes with gold foil detailing' },
   { id: 'custom', name: 'Custom Branding', description: 'Personalized packaging with name/logo' },
+  { id: 'other', name: 'Other', description: 'Custom packing requirements' },
 ];
 
 export default function TrousseauPackingPage() {
@@ -428,7 +429,7 @@ export default function TrousseauPackingPage() {
                 </label>
               ))}
 
-              {/* Single Other Packing Option */}
+              {/* Other Packing Option */}
               <label className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition col-span-1 md:col-span-2 ${
                 selection.packingType === 'other'
                   ? 'border-pink-600 bg-pink-50'

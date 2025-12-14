@@ -35,20 +35,6 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className="text-center">
-              <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl bg-black">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/media/video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -108,7 +94,7 @@ export default function HomePage() {
 
             {/* Trousseau packing */}
             <Link
-              href="/Trousseau-Packing"
+              href="/trousseau"
               className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-lg shadow-lg hover:shadow-2xl transition overflow-hidden group border border-blue-100"
             >
               <div className="relative h-48 w-full overflow-hidden bg-gray-100 group-hover:scale-110 transition">
@@ -226,18 +212,18 @@ export default function HomePage() {
             {[
               {
                 name: "Luxury Diwali Hamper",
-                price: "₹4,999",
                 image: "/media/hamm.jpeg",
+                link: "/hampers",
               },
               {
                 name: "Executive Gift Box",
-                price: "₹3,499",
                 image: "/media/executive.jpeg",
+                link: "/corporate",
               },
               {
                 name: "Premium Dry Fruits Box",
-                price: "₹2,999",
                 image: "/media/premuim dryfruit box.jpeg",
+                link: "/dryfruits",
               },
             ].map((product, idx) => (
               <div key={idx} className="bg-gradient-to-br from-pink-50 to-blue-50 rounded-lg shadow-lg overflow-hidden border border-blue-100">
@@ -250,15 +236,12 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-pink-700 mb-2">
+                  <h3 className="text-lg font-bold text-pink-700 mb-4">
                     {product.name}
                   </h3>
-                  <p className="text-pink-600 font-bold text-xl mb-4">
-                    {product.price}
-                  </p>
-                  <button className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded transition">
+                  <Link href={product.link} className="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded transition block text-center">
                     View Details
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

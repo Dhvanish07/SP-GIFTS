@@ -22,10 +22,10 @@ export default function AboutPage() {
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Our Journey</h2>
           <div>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Founded in 2010, Shree Parshva Gifts began with a singular vision: to deliver thoughtful, 
+              Founded in 2007, Shree Parshva Gifts began with a singular vision: to deliver thoughtful, 
               meticulously curated gifting solutions that foster meaningful relationships. What started as 
               a boutique initiative has evolved into a trusted partner for premium gifting across corporate 
-              and personal domains. Over the past 15 years, we have successfully executed over 50,000 orders, 
+              and personal domains. Over the past 18 years, we have successfully executed over 50,000 orders, 
               catering to individuals, families, and leading corporations. Our success is anchored in three 
               core pillars: uncompromising quality, meticulous attention to detail, and a steadfast commitment 
               to excellence that permeates every aspect of our operations.
@@ -49,7 +49,7 @@ export default function AboutPage() {
             Our Journey
           </h2>
           <p className="text-center text-gray-600 text-lg mb-12">
-            15 years of trust, quality, and meaningful gifting
+            18 years of trust, quality, and meaningful gifting
           </p>
           
           <div className="relative">
@@ -58,16 +58,16 @@ export default function AboutPage() {
             
             {/* Timeline Items */}
             <div className="space-y-12">
-              {/* 2010 */}
+              {/* 2007 */}
               <div className="relative">
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/2 text-right">
                     <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-pink-600">
-                      <h3 className="text-3xl font-bold text-pink-600 mb-2">2010</h3>
-                      <h4 className="text-xl font-semibold text-gray-800 mb-3">The Beginning</h4>
+                      <h3 className="text-3xl font-bold text-pink-600 mb-2">2007</h3>
+                      <h4 className="text-xl font-semibold text-gray-800 mb-3">The Foundation</h4>
                       <p className="text-gray-600 text-base leading-relaxed">
-                        Shree Parshva Gifts was founded with a vision to offer thoughtful, 
-                        high-quality gifting solutions for individuals and businesses.
+                        Shree Parshva Gifts was established with a passion for creating meaningful gifting experiences. 
+                        Our journey began with a small team dedicated to quality and customer satisfaction.
                       </p>
                     </div>
                   </div>
@@ -77,12 +77,12 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* 2012 */}
+              {/* 2011 */}
               <div className="relative">
                 <div className="flex flex-col md:flex-row-reverse gap-8">
                   <div className="md:w-1/2 text-left">
                     <div className="bg-white p-8 rounded-lg shadow-md border-r-4 border-blue-600">
-                      <h3 className="text-3xl font-bold text-blue-600 mb-2">2012</h3>
+                      <h3 className="text-3xl font-bold text-blue-600 mb-2">2011</h3>
                       <h4 className="text-xl font-semibold text-gray-800 mb-3">Growing Trust</h4>
                       <p className="text-gray-600 text-base leading-relaxed">
                         Built strong relationships with local customers through customized gifts, 
