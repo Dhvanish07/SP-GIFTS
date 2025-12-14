@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex items-center space-x-3 mb-8 pb-8 border-b-2 border-pink-300">
           <div className="relative w-16 h-16">
             <Image
-              src="/media/spg logo.png"
+              src="/media/spg-logo.png"
               alt="SPG Logo"
               fill
               className="object-cover rounded-lg"

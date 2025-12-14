@@ -48,7 +48,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative w-12 h-12 group-hover:shadow-lg group-hover:scale-110 transition transform rounded-lg overflow-hidden">
               <Image
-                src="/media/spg logo.png"
+                src="/media/spg-logo.png"
                 alt="SPG Logo"
                 fill
                 className="object-cover"

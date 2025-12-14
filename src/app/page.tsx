@@ -99,7 +99,7 @@ export default function HomePage() {
             >
               <div className="relative h-48 w-full overflow-hidden bg-gray-100 group-hover:scale-110 transition">
                 <Image
-                  src="/media/Trousseau Packing.jpeg"
+                  src="/media/dryfruit-box.jpeg"
                   alt="Trousseau Packing"
                   fill
                   className="object-cover"
@@ -123,7 +123,7 @@ export default function HomePage() {
             >
               <div className="relative h-48 w-full overflow-hidden bg-gray-100 group-hover:scale-110 transition">
                 <Image
-                  src="/media/Dryfruitbox.jpeg"
+                  src="/media/dryfruit-box.jpeg"
                   alt="Dry Fruit Boxes"
                   fill
                   className="object-cover"
@@ -169,7 +169,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <Image
-                  src="/media/fast delivery.jpeg"
+                  src="/media/fast-delivery.jpeg"
                   alt="Delivery"
                   fill
                   className="rounded-full object-cover"
@@ -185,7 +185,7 @@ export default function HomePage() {
             <div className="text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <Image
-                  src="/media/customer satisfaction.jpeg"
+                  src="/media/customer-satisfaction.jpeg"
                   alt="Satisfaction"
                   fill
                   className="rounded-full object-cover"
@@ -222,7 +222,7 @@ export default function HomePage() {
               },
               {
                 name: "Premium Dry Fruits Box",
-                image: "/media/premuim dryfruit box.jpeg",
+                image: "/media/premium-dryfruit-box.jpeg",
                 link: "/dryfruits",
               },
             ].map((product, idx) => (
