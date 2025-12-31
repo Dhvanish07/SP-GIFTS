@@ -62,11 +62,16 @@ export default function DryfruitsPage() {
   const [partitionSelections, setPartitionSelections] = useState<PartitionSelection[]>([]);
   const [currentPartitionIndex, setCurrentPartitionIndex] = useState<number>(0);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleQuantitySelect = (quantityId: string) => {
     setSelectedQuantity(quantityId);
   };
 
   const handlePartitionSelect = (partitionId: string) => {
+    scrollToTop();
     setSelectedPartitions(partitionId);
     const count = parseInt(partitionId);
     setPartitionSelections(
@@ -85,30 +90,36 @@ export default function DryfruitsPage() {
     setPartitionSelections(updated);
 
     if (currentPartitionIndex < updated.length - 1) {
+      scrollToTop();
       setCurrentPartitionIndex(currentPartitionIndex + 1);
     } else {
+      scrollToTop();
       setCurrentStep('boxtype');
     }
   };
 
   const handleBoxTypeSelect = (boxTypeId: string) => {
+    scrollToTop();
     setSelectedBoxType(boxTypeId);
     setCurrentStep('boxquantity');
   };
 
   const handleBoxQuantitySelect = () => {
     if (selectedBoxQuantity >= 1) {
+      scrollToTop();
       setCurrentStep('review');
     }
   };
 
   const handleBackToPartition = () => {
+    scrollToTop();
     setCurrentStep('partitions');
     setSelectedPartitions('');
     setPartitionSelections([]);
   };
 
   const handleBackToQuantity = () => {
+    scrollToTop();
     setCurrentStep('quantity');
     setSelectedQuantity('');
     setSelectedBoxType('');

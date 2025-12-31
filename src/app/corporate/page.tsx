@@ -65,6 +65,10 @@ export default function CorporateGiftingPage() {
     quantity: 100,
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const getRecipientName = () => selection.recipient === 'other' ? selection.recipientOther : RECIPIENTS.find(r => r.id === selection.recipient)?.name || '';
   const getGiftTypeName = () => selection.giftType === 'other' ? selection.giftTypeOther : GIFT_TYPES.find(g => g.id === selection.giftType)?.name || '';
   const getPriceRangeName = () => selection.priceRange === 'custom' ? `₹${selection.customPriceMin} - ₹${selection.customPriceMax}` : PRICE_RANGES.find(p => p.id === selection.priceRange)?.range || '';
@@ -192,7 +196,10 @@ export default function CorporateGiftingPage() {
 
             <div className="flex justify-end">
               <button
-                onClick={() => setCurrentStep('gifttype')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('gifttype');
+                }}
                 disabled={!selection.recipient || (selection.recipient === 'other' && !selection.recipientOther)}
                 className="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 text-white font-bold py-3 px-8 rounded-lg transition flex items-center gap-2"
               >
@@ -251,13 +258,19 @@ export default function CorporateGiftingPage() {
 
             <div className="flex justify-between">
               <button
-                onClick={() => setCurrentStep('recipient')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('recipient');
+                }}
                 className="text-pink-600 hover:text-pink-700 font-bold py-3 px-8 rounded-lg border border-pink-600 transition flex items-center gap-2"
               >
                 <ChevronLeft size={20} /> Back
               </button>
               <button
-                onClick={() => setCurrentStep('customization')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('customization');
+                }}
                 disabled={!selection.giftType || (selection.giftType === 'other' && !selection.giftTypeOther)}
                 className="bg-pink-600 hover:bg-pink-700 disabled:bg-gray-400 text-white font-bold py-3 px-8 rounded-lg transition flex items-center gap-2"
               >
@@ -362,13 +375,19 @@ export default function CorporateGiftingPage() {
 
             <div className="flex justify-between">
               <button
-                onClick={() => setCurrentStep('gifttype')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('gifttype');
+                }}
                 className="text-pink-600 hover:text-pink-700 font-bold py-3 px-8 rounded-lg border border-pink-600 transition flex items-center gap-2"
               >
                 <ChevronLeft size={20} /> Back
               </button>
               <button
-                onClick={() => setCurrentStep('pricerange')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('pricerange');
+                }}
                 className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg transition flex items-center gap-2"
               >
                 Next Step <ArrowRight size={20} />
@@ -497,7 +516,10 @@ export default function CorporateGiftingPage() {
 
             <div className="flex justify-between">
               <button
-                onClick={() => setCurrentStep('customization')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('customization');
+                }}
                 className="text-pink-600 hover:text-pink-700 font-bold py-3 px-8 rounded-lg border border-pink-600 transition flex items-center gap-2"
               >
                 <ChevronLeft size={20} /> Back

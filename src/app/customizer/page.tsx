@@ -153,6 +153,10 @@ export default function CustomizerPage() {
   const [selectedContent, setSelectedContent] = useState<SelectedContent[]>([]);
   const [customItems, setCustomItems] = useState<{ [key: string]: string }>({});
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const toggleItem = (category: string, item: string) => {
     setSelectedContent((prev) => {
       const existing = prev.find((c) => c.category === category);
@@ -186,23 +190,27 @@ export default function CustomizerPage() {
 
   const handleBasketTypeNext = () => {
     if (selectedBasketType) {
+      scrollToTop();
       setCurrentStep('basket-size');
     }
   };
 
   const handleSizeNext = () => {
     if (selectedSize) {
+      scrollToTop();
       setCurrentStep('contents');
     }
   };
 
   const handleContentsNext = () => {
     if (selectedContent.length > 0) {
+      scrollToTop();
       setCurrentStep('review');
     }
   };
 
   const handleGoBack = () => {
+    scrollToTop();
     if (currentStep === 'basket-size') {
       setCurrentStep('basket-type');
     } else if (currentStep === 'contents') {

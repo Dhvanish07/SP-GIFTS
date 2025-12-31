@@ -97,6 +97,10 @@ export default function LiveCountersPage() {
   const [totalBudget, setTotalBudget] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const toggleOption = (category: string, item: string) => {
     setSelectedOptions((prev) => {
       const exists = prev.find((opt) => opt.category === category && opt.item === item);
@@ -114,6 +118,7 @@ export default function LiveCountersPage() {
 
   const handleNext = () => {
     if (selectedOptions.length > 0 || customIdea.trim()) {
+      scrollToTop();
       setCurrentStep('details');
     }
   };
@@ -150,6 +155,7 @@ Looking forward to working with you!`;
   };
 
   const handleGoBack = () => {
+    scrollToTop();
     setCurrentStep('categories');
   };
 

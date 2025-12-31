@@ -55,6 +55,10 @@ export default function TrousseauPackingPage() {
     customizationNotes: '',
   });
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const getTotalItems = () => {
     const predefinedTotal = Object.values(selection.items).reduce((sum, qty) => sum + qty, 0);
     const customTotal = selection.customItems.reduce((sum, item) => sum + item.quantity, 0);
@@ -387,7 +391,10 @@ export default function TrousseauPackingPage() {
             <div className="flex justify-between">
               <button disabled className="px-6 py-3 text-gray-400 font-semibold">← Back</button>
               <button
-                onClick={() => setCurrentStep('packing')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('packing');
+                }}
                 disabled={getTotalItems() === 0}
                 className="flex items-center px-8 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -461,13 +468,19 @@ export default function TrousseauPackingPage() {
 
             <div className="flex justify-between">
               <button
-                onClick={() => setCurrentStep('items')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('items');
+                }}
                 className="flex items-center px-8 py-3 border-2 border-pink-600 text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition"
               >
                 <ChevronLeft className="mr-2" size={20} /> Back
               </button>
               <button
-                onClick={() => setCurrentStep('customization')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('customization');
+                }}
                 disabled={!selection.packingType || (selection.packingType === 'other' && !selection.packingTypeOther)}
                 className="flex items-center px-8 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -496,13 +509,19 @@ export default function TrousseauPackingPage() {
 
             <div className="flex justify-between">
               <button
-                onClick={() => setCurrentStep('packing')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('packing');
+                }}
                 className="flex items-center px-8 py-3 border-2 border-pink-600 text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition"
               >
                 <ChevronLeft className="mr-2" size={20} /> Back
               </button>
               <button
-                onClick={() => setCurrentStep('review')}
+                onClick={() => {
+                  scrollToTop();
+                  setCurrentStep('review');
+                }}
                 className="flex items-center px-8 py-3 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700 transition"
               >
                 Next <ArrowRight className="ml-2" size={20} />
@@ -571,7 +590,10 @@ export default function TrousseauPackingPage() {
                 </button>
 
                 <button
-                  onClick={() => setCurrentStep('customization')}
+                  onClick={() => {
+                    scrollToTop();
+                    setCurrentStep('customization');
+                  }}
                   className="w-full px-8 py-3 border-2 border-pink-600 text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition"
                 >
                   Edit Selection
