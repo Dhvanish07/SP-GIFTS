@@ -36,6 +36,7 @@ export default function Navigation() {
     { href: "/dryfruits", label: "Dryfruit Boxes" },
     { href: "/trousseau", label: "Trousseau Packing" },
     { href: "/corporate", label: "Corporate Gifting" },
+    { href: "/live-counters", label: "Live Counters" },
     { href: "/stories", label: "Customer Stories" },
     { href: "/about", label: "About" },
   ];

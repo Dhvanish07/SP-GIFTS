@@ -66,11 +66,17 @@ const CONTENT_OPTIONS: ContentCategory[] = [
     items: [
       'Roasted Namkeen Mix',
       'Flavoured Makhana (Peri-Peri / Cheese / Pudina)',
-      'Baked Chips',
       'Savoury Crackers',
       'Premium Cookies (Butter / Oats)',
       'Trail Mix',
       'Mini Samosa / Mathri Packs',
+      'Lays/Banana Chips',
+      'Popcorn (Cheese / Caramel)',
+      'Cheese Balls',
+      'Aloo Bhujia',
+      "Moong Dal",
+      'Tasty Nuts',
+      'Mix Bhel'
     ],
   },
   {
@@ -78,8 +84,8 @@ const CONTENT_OPTIONS: ContentCategory[] = [
     items: [
       'Organic Honey',
       'Mixed Seeds Jar (Pumpkin, Sunflower, Flax)',
-      'Herbal / Green Tea',
-      'Green Coffee / Detox Tea',
+      'Girnar Tea',
+      'Detox Tea',
       'Energy Bars',
       'Dry Fruit Laddoos',
       'Jaggery Bites / Dates Rolls',
@@ -88,11 +94,10 @@ const CONTENT_OPTIONS: ContentCategory[] = [
   {
     category: 'Beverages',
     items: [
-      'Premium Tea (Assam / Darjeeling)',
-      'Instant Coffee Sachets',
-      'Hot Chocolate Mix',
-      'Flavoured Syrups',
-      'Health Drinks',
+      'Airated soft drinks(Coke, Pepsi, Fanta)',
+      'Juice packs (Mango, Orange, Mixed Fruit)',
+      'Energy Drinks(Red Bull, Monster)',
+
     ],
   },
   {
@@ -118,6 +123,19 @@ const CONTENT_OPTIONS: ContentCategory[] = [
     ],
   },
   {
+    category: 'Local Delicacies Of Goa',
+    items: [
+      'Dodol',
+      'Bebinca',
+      'Kokum Juice',
+      'Jackfruit Chips',
+      'Cookies',
+      'Chocolates',
+      'Chivda',
+      'Sakar Pada'
+    ]
+  },
+    {
     category: 'Personalisation',
     items: [
       'Custom Greeting Card',
@@ -125,7 +143,7 @@ const CONTENT_OPTIONS: ContentCategory[] = [
       'Custom Message Insert',
       'Theme-Based Packaging',
     ],
-  },
+  }
 ];
 
 export default function CustomizerPage() {
@@ -387,7 +405,7 @@ export default function CustomizerPage() {
                       <div className="flex gap-2 mb-3">
                         <input
                           type="text"
-                          placeholder={`e.g., "Cashew Brittle" or "Dark Chocolate 70%"`}
+                          placeholder={'Please Specify'} 
                           value={customItems[category.category] || ''}
                           onChange={(e) =>
                             setCustomItems({
